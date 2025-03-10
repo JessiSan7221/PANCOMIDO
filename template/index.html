@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- esto muestra las redes sociales-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/index.css" />
+
+    <title>PANCOMIDO| Panadería y Cafetería</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>PANCOMIDO</h1>
+
+      <p>Panadería & Cafetería</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="/static/pancomido.png" alt="log" class="logo" />
+        <h2>Sabores que te hacen sentir en casa</h2>
+        <p>
+          Productos recién horneados todos los días, elaborados con ingredientes
+          selectos y mucho amor.
+        </p>
+        <a href="#productos" class="btn">Ver Productos</a>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos" class="container">
+      <h2 class="section-title">Nuestros Productos</h2>
+
+      <div class="category-tabs">
+        <button class="tab active" data-target="panaderia">Panadería</button>
+        <button class="tab" data-target="cafeteria">Cafetería</button>
+      </div>
+
+      <!-- Panadería Products -->
+      <div id="panaderia" class="product-section active">
+        <div class="products">
+          <!-- Producto 1 -->
+          <div class="product-card">
+            <img
+              src="/static/9e54b8f13f9bed50fe09ae3905b199a5.jpg"
+              alt="Pan Francés"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Pan Francés</h3>
+              <p class="product-description">
+                Crujiente por fuera, suave por dentro. Perfecto para acompañar
+                todas tus comidas.
+              </p>
+              <p class="product-price">$2.500</p>
+              <button
+                class="add-to-cart"
+                data-id="p1"
+                data-name="Pan Francés"
+                data-price="2.500"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 2 -->
+          <div class="product-card">
+            <img
+              src="/static/b6561d6dce4db825016f06c79391de9d.jpg"
+              alt="Croissant"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Croissant Clásico</h3>
+              <p class="product-description">
+                Hojaldrado y mantecoso. La receta tradicional francesa en tu
+                mesa.
+              </p>
+              <p class="product-price">$3.000</p>
+              <button
+                class="add-to-cart"
+                data-id="p2"
+                data-name="Croissant Clásico"
+                data-price="3.000"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 3 -->
+          <div class="product-card">
+            <img
+              src="/static/panchoco.jpg"
+              alt="Pan de Chocolate"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Pan de Chocolate</h3>
+              <p class="product-description">
+                Pan dulce con trozos de chocolate semiamsargo. Una delicia
+                irresistible.
+              </p>
+              <p class="product-price">$4.500</p>
+              <button
+                class="add-to-cart"
+                data-id="p3"
+                data-name="Pan de Chocolate"
+                data-price="4.500"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 4 -->
+          <div class="product-card">
+            <img
+              src="/static/baggette.jpg"
+              alt="Baguette"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Baguette Tradicional</h3>
+              <p class="product-description">
+                Elaborada con masa madre y horneada a la perfección.
+              </p>
+              <p class="product-price">$3.500</p>
+              <button
+                class="add-to-cart"
+                data-id="p4"
+                data-name="Baguette Tradicional"
+                data-price="3.500"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 5 -->
+          <div class="product-card">
+            <img
+              src="/static/pandebanano.jpg"
+              alt="Panqué de Plátano"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Panqué de Plátano</h3>
+              <p class="product-description">
+                Húmedo y suave, con trozos de nuez y canela.
+              </p>
+              <p class="product-price">$5.200</p>
+              <button
+                class="add-to-cart"
+                data-id="p5"
+                data-name="Panqué de Plátano"
+                data-price="5.200"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 6 -->
+          <div class="product-card">
+            <img
+              src="/static/conchadeazucar.jpg"
+              alt="Concha"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Concha</h3>
+              <p class="product-description">
+                Pan dulce tradicional cubierto con una capa crujiente de azúcar.
+              </p>
+              <p class="product-price">$2.700</p>
+              <button
+                class="add-to-cart"
+                data-id="p6"
+                data-name="Concha"
+                data-price="2.700"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 7 -->
+          <div class="product-card">
+            <img
+              src="/static/roldecanela.jpg"
+              alt="Rol de Canela"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Rol de Canela</h3>
+              <p class="product-description">
+                Suave masa enrollada con canela y azúcar, cubierta con glaseado.
+              </p>
+              <p class="product-price">$4.500</p>
+              <button
+                class="add-to-cart"
+                data-id="p7"
+                data-name="Rol de Canela"
+                data-price="4.500"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 8 -->
+          <div class="product-card">
+            <img
+              src="/static/CENTENO.jpg"
+              alt="Pan de Centeno"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Pan de Centeno</h3>
+              <p class="product-description">
+                Denso y nutritivo, ideal para sándwiches y tostadas.
+              </p>
+              <p class="product-price">$4.000</p>
+              <button
+                class="add-to-cart"
+                data-id="p8"
+                data-name="Pan de Centeno"
+                data-price="4.000"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 9 -->
+          <div class="product-card">
+            <img
+              src="/static/donas.jpg"
+              alt="Donas Glaseadas"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Donas Glaseadas</h3>
+              <p class="product-description">
+                Esponjosas y cubiertas con glaseado de diferentes sabores.
+              </p>
+              <p class="product-price">$3.700</p>
+              <button
+                class="add-to-cart"
+                data-id="p9"
+                data-name="Donas Glaseadas"
+                data-price="3.700"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 10 -->
+          <div class="product-card">
+            <img
+              src="/static/83fc9f155c260f1a110e5afc27b60519.jpg"
+              alt="Pan Integral"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Pan Integral</h3>
+              <p class="product-description">
+                Elaborado con harinas integrales y semillas. Opción saludable.
+              </p>
+              <p class="product-price">$3.750</p>
+              <button
+                class="add-to-cart"
+                data-id="p10"
+                data-name="Pan Integral"
+                data-price="3.750"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 11 -->
+          <div class="product-card">
+            <img src="/static/corazon.jpg" alt="Corazon" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Corazon</h3>
+              <p class="product-description">
+                Crujientes y caramelizadas, perfectas para acompañar tu café.
+              </p>
+              <p class="product-price">$2.900</p>
+              <button
+                class="add-to-cart"
+                data-id="p11"
+                data-name="Orejas"
+                data-price="2.900"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 12 -->
+          <div class="product-card">
+            <img src="/static/brioche.jpg" alt="Brioche" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Brioche</h3>
+              <p class="product-description">
+                Pan enriquecido con mantequilla y huevo. Textura suave y sabor
+                elegante.
+              </p>
+              <p class="product-price">$4.750</p>
+              <button
+                class="add-to-cart"
+                data-id="p12"
+                data-name="Brioche"
+                data-price="4.750"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 13 -->
+          <div class="product-card">
+            <img
+              src="/static/d83001017b0799b77663852db0880858.jpg"
+              alt="Empanada de Manzana"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Empanada de Manzana</h3>
+              <p class="product-description">
+                Rellena de manzana caramelizada con canela y azúcar.
+              </p>
+              <p class="product-price">$4.200</p>
+              <button
+                class="add-to-cart"
+                data-id="p13"
+                data-name="Empanada de Manzana"
+                data-price="4.200"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 14 -->
+          <div class="product-card">
+            <img
+              src="/static/focaccia.jpg"
+              alt="Focaccia"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Focaccia</h3>
+              <p class="product-description">
+                Pan italiano con aceite de oliva, romero y sal marina.
+              </p>
+              <p class="product-price">$5.500</p>
+              <button
+                class="add-to-cart"
+                data-id="p14"
+                data-name="Focaccia"
+                data-price="5.500"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 15 -->
+          <div class="product-card">
+            <img
+              src="/static/galletas.jpg"
+              alt="Galletas de Avena"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Galletas de Avena</h3>
+              <p class="product-description">
+                Con pasas y trozos de chocolate. Ideales para cualquier momento.
+              </p>
+              <p class="product-price">$3.200</p>
+              <button
+                class="add-to-cart"
+                data-id="p15"
+                data-name="Galletas de Avena"
+                data-price="3.200"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cafetería Products -->
+      <div id="cafeteria" class="product-section">
+        <div class="products">
+          <!-- Producto 1 -->
+          <div class="product-card">
+            <img
+              src="/static/expresso.jpg"
+              alt="Espresso"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Espresso</h3>
+              <p class="product-description">
+                Shot concentrado de café. Intenso y aromático.<br />100%
+                Colombiano.
+              </p>
+              <p class="product-price">$2.750</p>
+              <button
+                class="add-to-cart"
+                data-id="c1"
+                data-name="Espresso"
+                data-price="2.750"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 2 -->
+          <div class="product-card">
+            <img
+              src="/static/americano.jpg"
+              alt="Americano"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Americano</h3>
+              <p class="product-description">
+                Espresso con agua caliente. Suave pero con carácter.
+              </p>
+              <p class="product-price">$3.250</p>
+              <button
+                class="add-to-cart"
+                data-id="c2"
+                data-name="Americano"
+                data-price="3.250"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 3 -->
+          <div class="product-card">
+            <img
+              src="/static/capuccino.jpg"
+              alt="Cappuccino"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Cappuccino</h3>
+              <p class="product-description">
+                Espresso con leche vaporizada y espuma. Un clásico italiano.
+              </p>
+              <p class="product-price">$4.500</p>
+              <button
+                class="add-to-cart"
+                data-id="c3"
+                data-name="Cappuccino"
+                data-price="4.500"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 4 -->
+          <div class="product-card">
+            <img src="/static/latte.jpg" alt="Latte" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Latte</h3>
+              <p class="product-description">
+                Espresso con abundante leche vaporizada y una capa de espuma.
+              </p>
+              <p class="product-price">$4.750</p>
+              <button
+                class="add-to-cart"
+                data-id="c4"
+                data-name="Latte"
+                data-price="4.750"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 5 -->
+          <div class="product-card">
+            <img src="/static/mocha.jpg" alt="Mocha" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Mocha</h3>
+              <p class="product-description">
+                Espresso con chocolate, leche vaporizada y crema batida.
+              </p>
+              <p class="product-price">$5.250</p>
+              <button
+                class="add-to-cart"
+                data-id="c5"
+                data-name="Mocha"
+                data-price="5.250"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 6 -->
+          <div class="product-card">
+            <img
+              src="/static/cafefrio2.jpg"
+              alt="Café Frío"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Cold Brew</h3>
+              <p class="product-description">
+                Café infusionado en frío durante 12 horas. Suave y refrescante.
+              </p>
+              <p class="product-price">$4.950</p>
+              <button
+                class="add-to-cart"
+                data-id="c6"
+                data-name="Cold Brew"
+                data-price="4.950"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 7 -->
+          <div class="product-card">
+            <img
+              src="/static/frapuccino.jpg"
+              alt="Frappuccino"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Frappuccino</h3>
+              <p class="product-description">
+                Bebida helada a base de café, leche y hielo. Diversas opciones.
+              </p>
+              <p class="product-price">$5.750</p>
+              <button
+                class="add-to-cart"
+                data-id="c7"
+                data-name="Frappuccino"
+                data-price="5.750"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 8 -->
+          <div class="product-card">
+            <img src="/static/chai.jpg" alt="Chai Latte" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Chai Latte</h3>
+              <p class="product-description">
+                Té negro con especias, leche vaporizada y un toque de miel.
+              </p>
+              <p class="product-price">$4.500</p>
+              <button
+                class="add-to-cart"
+                data-id="c8"
+                data-name="Chai Latte"
+                data-price="4.500"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 9 -->
+          <div class="product-card">
+            <img
+              src="/static/matcha.jpg"
+              alt="Matcha Latte"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Matcha Latte</h3>
+              <p class="product-description">
+                Té verde matcha ceremonial con leche vaporizada.
+              </p>
+              <p class="product-price">$5.250</p>
+              <button
+                class="add-to-cart"
+                data-id="c9"
+                data-name="Matcha Latte"
+                data-price="5.250"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 10 -->
+          <div class="product-card">
+            <img
+              src="/static/chocolatecal.jpg"
+              alt="Chocolate Caliente"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Chocolate Caliente</h3>
+              <p class="product-description">
+                Elaborado con chocolate real y leche cremosa. Puro comfort.
+              </p>
+              <p class="product-price">$4.250</p>
+              <button
+                class="add-to-cart"
+                data-id="c10"
+                data-name="Chocolate Caliente"
+                data-price="4.250"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 11 -->
+          <div class="product-card">
+            <img
+              src="/static/te negro.jpg"
+              alt="Té Negro"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Té Negro</h3>
+              <p class="product-description">
+                Selección premium de té negro. Servido caliente o frío.
+              </p>
+              <p class="product-price">$3.50</p>
+              <button
+                class="add-to-cart"
+                data-id="c11"
+                data-name="Té Negro"
+                data-price="3.50"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 12 -->
+          <div class="product-card">
+            <img
+              src="/static/559affaf0808d3f7728537fbb8475d33.jpg"
+              alt="Té Verde"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Té Verde</h3>
+              <p class="product-description">
+                Refrescante y delicado. Con propiedades antioxidantes.
+              </p>
+              <p class="product-price">$3.500</p>
+              <button
+                class="add-to-cart"
+                data-id="c12"
+                data-name="Té Verde"
+                data-price="3.500"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 13 -->
+          <div class="product-card">
+            <img
+              src="/static/naranja.jpg"
+              alt="Jugo de Naranja"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Jugo de Naranja</h3>
+              <p class="product-description">
+                Recién exprimido, 100% natural y refrescante.
+              </p>
+              <p class="product-price">$3.950</p>
+              <button
+                class="add-to-cart"
+                data-id="c13"
+                data-name="Jugo de Naranja"
+                data-price="3.950"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 14 -->
+          <div class="product-card">
+            <img
+              src="/static/limonada.jpg"
+              alt="Limonada"
+              class="product-img"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Limonada</h3>
+              <p class="product-description">
+                Natural, refrescante y con el equilibrio perfecto entre dulce y
+                ácido.
+              </p>
+              <p class="product-price">$3.750</p>
+              <button
+                class="add-to-cart"
+                data-id="c14"
+                data-name="Limonada"
+                data-price="3.750"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Producto 15 -->
+          <div class="product-card">
+            <img src="/static/jugos.jpg" alt="Smoothie" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Smoothie de Frutas</h3>
+              <p class="product-description">
+                Mezcla de frutas frescas con yogurt o leche. Diversas opciones.
+              </p>
+              <p class="product-price">$5.950</p>
+              <button
+                class="add-to-cart"
+                data-id="c15"
+                data-name="Smoothie de Frutas"
+                data-price="5.950"
+              >
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="container">
+      <h2 class="section-title">Sobre Nosotros</h2>
+      <div class="about-content">
+        <div class="about-img">
+          <img src="/static/panaderia.jpg" alt="Nuestra Panadería" />
+        </div>
+        <div class="about-text">
+          <h3>Nuestra Historia</h3>
+          <p>
+            Pancomido nació en 2025 con la visión de crear un espacio donde los
+            aromas y sabores tradicionales de la panadería artesanal se
+            combinaran con técnicas modernas y creativas.
+          </p>
+          <p>
+            Iniciamos como una pequeña panadería familiar y hoy hemos crecido
+            para ofrecer también una experiencia de cafetería única, manteniendo
+            siempre nuestra dedicación a la calidad y la artesanía.
+          </p>
+          <h3>Nuestros Valores</h3>
+          <ul>
+            <li>
+              Ingredientes de primera calidad seleccionados cuidadosamente
+            </li>
+            <li>Elaboración artesanal con técnicas tradicionales</li>
+            <li>Innovación constante en sabores y presentaciones</li>
+            <li>Atención personalizada y ambiente acogedor</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="container">
+      <h2 class="section-title">Contáctanos</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Información de Contacto</h3>
+          <p><strong>Dirección:</strong> Av. Principal 123</p>
+          <p><strong>Teléfono:</strong> (123) 456-7890</p>
+          <p><strong>Email:</strong> info@pancomido.com</p>
+          <h3>Horario</h3>
+          <p><strong>Lunes a Viernes:</strong> 7:00 AM - 9:00 PM</p>
+          <p><strong>Sábado:</strong> 8:00 AM - 8:00 PM</p>
+          <p><strong>Domingo:</strong> 9:00 AM - 6:00 PM</p>
+        </div>
+        <div class="contact-form">
+          <h3>Envíanos un Mensaje</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Asunto</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon">
+      <span class="cart-count">0</span>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal">
+      <div class="cart-content">
+        <div class="cart-header">
+          <h3>Tu Carrito</h3>
+          <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+          <!-- Cart items will be added here dynamically -->
+          <div class="empty-cart">Tu carrito está vacío</div>
+        </div>
+        <div class="cart-total">
+          <span>Total:</span>
+          <span>$0.00</span>
+        </div>
+        <button class="checkout-btn">Proceder al Pago</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>PANCOMIDO</h3>
+          <p>
+            Panadería & Cafetería de calidad artesanal con ingredientes selectos
+            para deleitar tu paladar.
+          </p>
+          <div class="social-links">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Enlaces Rápidos</h3>
+          <a href="#inicio">Inicio</a>
+          <a href="#productos">Productos</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <p>
+            Suscríbete para recibir noticias sobre nuevos productos y
+            promociones.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Tu correo electrónico" />
+            <button type="submit">Suscribirse</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 PANCOMIDO. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script>
+      // Script para manejar las pestañas de categorías
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll(".tab");
+        const productSections = document.querySelectorAll(".product-section");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            const target = tab.dataset.target;
+
+            // Remover clase active de todos los tabs y secciones
+            tabs.forEach((t) => t.classList.remove("active"));
+            productSections.forEach((section) =>
+              section.classList.remove("active")
+            );
+
+            // Activar el tab y sección correspondiente
+            tab.classList.add("active");
+            document.getElementById(target).classList.add("active");
+          });
+        });
+      });
+
+      // (Aquí iría el resto de tu código del carrito de compras)
+    </script>
+  </body>
+</html>
