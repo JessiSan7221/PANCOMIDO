@@ -3,22 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- esto muestra las redes sociales-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link rel="stylesheet" href="/static/index.css" />
-
     <title>PANCOMIDO| Panadería y Cafetería</title>
   </head>
   <body>
     <!-- Header -->
     <header>
       <h1>PANCOMIDO</h1>
-
       <p>Panadería & Cafetería</p>
+
+      <!-- Icono del carrito -->
+      <div id="cart-icon" class="cart-icon">
+        🛒 <span class="cart-count">0</span>
+      </div>
     </header>
+
+    <!-- Modal del Carrito -->
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Tu Carrito</h3>
+        <div class="cart-items"></div>
+        <div class="cart-total">Total: $0.00</div>
+        <button class="checkout-btn">Finalizar Compra</button>
+      </div>
+    </div>
+    <div id="cart">
+      <h2>Carrito de Compras</h2>
+      <div id="cart-items"></div>
+      <p id="total-price">Total: $0.00</p>
+      <button onclick="finalizePurchase()">Finalizar Compra</button>
+    </div>
 
     <!-- Navigation -->
     <nav>
@@ -33,7 +52,7 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <img src="/static/pancomido.png" alt="log" class="logo" />
+        <img src="/static/img/pancomido.png"log" class="logo" />
         <h2>Sabores que te hacen sentir en casa</h2>
         <p>
           Productos recién horneados todos los días, elaborados con ingredientes
@@ -58,7 +77,7 @@
           <!-- Producto 1 -->
           <div class="product-card">
             <img
-              src="/static/9e54b8f13f9bed50fe09ae3905b199a5.jpg"
+              src="/static/img/9e54b8f13f9bed50fe09ae3905b199a5.jpg"
               alt="Pan Francés"
               class="product-img"
             />
@@ -70,20 +89,20 @@
               </p>
               <p class="product-price">$2.500</p>
               <button
-                class="add-to-cart"
-                data-id="p1"
-                data-name="Pan Francés"
-                data-price="2.500"
+                class="add-to-cart-btn"
+                data-product-id="1"
+                data-product-name="Pan Francés"
+                data-product-price="2.50"
               >
-                Añadir al Carrito
+                Añadir al carrito
               </button>
             </div>
           </div>
 
-          <!-- Producto 2 -->
+          <!-- Producto 2 (CORREGIDO) -->
           <div class="product-card">
             <img
-              src="/static/b6561d6dce4db825016f06c79391de9d.jpg"
+              src="/static/img/b6561d6dce4db825016f06c79391de9d.jpg"
               alt="Croissant"
               class="product-img"
             />
@@ -95,35 +114,36 @@
               </p>
               <p class="product-price">$3.000</p>
               <button
-                class="add-to-cart"
-                data-id="p2"
-                data-name="Croissant Clásico"
-                data-price="3.000"
+                class="add-to-cart-btn"
+                onclick="agregar"
+                data-product-id="2"
+                data-product-name="Croissant Clásico"
+                data-product-price="3.00"
               >
                 Añadir al Carrito
               </button>
             </div>
           </div>
 
-          <!-- Producto 3 -->
+          <!-- Producto 3 (CORREGIDO) -->
           <div class="product-card">
             <img
-              src="/static/panchoco.jpg"
+              src="/static/img/panchoco.jpg"
               alt="Pan de Chocolate"
               class="product-img"
             />
             <div class="product-info">
               <h3 class="product-title">Pan de Chocolate</h3>
               <p class="product-description">
-                Pan dulce con trozos de chocolate semiamsargo. Una delicia
+                Pan dulce con trozos de chocolate semiamargo. Una delicia
                 irresistible.
               </p>
               <p class="product-price">$4.500</p>
               <button
-                class="add-to-cart"
-                data-id="p3"
-                data-name="Pan de Chocolate"
-                data-price="4.500"
+                class="add-to-cart-btn"
+                data-product-id="3"
+                data-product-name="Pan de Chocolate"
+                data-product-price="4.50"
               >
                 Añadir al Carrito
               </button>
@@ -133,7 +153,7 @@
           <!-- Producto 4 -->
           <div class="product-card">
             <img
-              src="/static/baggette.jpg"
+              src="/static/img/baggette.jpg"
               alt="Baguette"
               class="product-img"
             />
@@ -157,7 +177,7 @@
           <!-- Producto 5 -->
           <div class="product-card">
             <img
-              src="/static/pandebanano.jpg"
+              src="/static/img/pandebanano.jpg"
               alt="Panqué de Plátano"
               class="product-img"
             />
@@ -181,7 +201,7 @@
           <!-- Producto 6 -->
           <div class="product-card">
             <img
-              src="/static/conchadeazucar.jpg"
+              src="/static/img/conchadeazucar.jpg"
               alt="Concha"
               class="product-img"
             />
@@ -205,7 +225,7 @@
           <!-- Producto 7 -->
           <div class="product-card">
             <img
-              src="/static/roldecanela.jpg"
+              src="/static/img/roldecanela.jpg"
               alt="Rol de Canela"
               class="product-img"
             />
@@ -229,7 +249,7 @@
           <!-- Producto 8 -->
           <div class="product-card">
             <img
-              src="/static/CENTENO.jpg"
+              src="/static/img/CENTENO.jpg"
               alt="Pan de Centeno"
               class="product-img"
             />
@@ -253,7 +273,7 @@
           <!-- Producto 9 -->
           <div class="product-card">
             <img
-              src="/static/donas.jpg"
+              src="/static/img/donas.jpg"
               alt="Donas Glaseadas"
               class="product-img"
             />
@@ -277,7 +297,7 @@
           <!-- Producto 10 -->
           <div class="product-card">
             <img
-              src="/static/83fc9f155c260f1a110e5afc27b60519.jpg"
+              src="/static/img/83fc9f155c260f1a110e5afc27b60519.jpg"
               alt="Pan Integral"
               class="product-img"
             />
@@ -300,7 +320,11 @@
 
           <!-- Producto 11 -->
           <div class="product-card">
-            <img src="/static/corazon.jpg" alt="Corazon" class="product-img" />
+            <img
+              src="/static/img/corazon.jpg"
+              alt="Corazon"
+              class="product-img"
+            />
             <div class="product-info">
               <h3 class="product-title">Corazon</h3>
               <p class="product-description">
@@ -320,7 +344,11 @@
 
           <!-- Producto 12 -->
           <div class="product-card">
-            <img src="/static/brioche.jpg" alt="Brioche" class="product-img" />
+            <img
+              src="/static/img/brioche.jpg"
+              alt="Brioche"
+              class="product-img"
+            />
             <div class="product-info">
               <h3 class="product-title">Brioche</h3>
               <p class="product-description">
@@ -342,7 +370,7 @@
           <!-- Producto 13 -->
           <div class="product-card">
             <img
-              src="/static/d83001017b0799b77663852db0880858.jpg"
+              src="/static/img/d83001017b0799b77663852db0880858.jpg"
               alt="Empanada de Manzana"
               class="product-img"
             />
@@ -366,7 +394,7 @@
           <!-- Producto 14 -->
           <div class="product-card">
             <img
-              src="/static/focaccia.jpg"
+              src="/static/img/focaccia.jpg"
               alt="Focaccia"
               class="product-img"
             />
@@ -390,7 +418,7 @@
           <!-- Producto 15 -->
           <div class="product-card">
             <img
-              src="/static/galletas.jpg"
+              src="/static/img/galletas.jpg"
               alt="Galletas de Avena"
               class="product-img"
             />
@@ -416,10 +444,10 @@
       <!-- Cafetería Products -->
       <div id="cafeteria" class="product-section">
         <div class="products">
-          <!-- Producto 1 -->
+          <!-- Producto 1 (CORREGIDO) -->
           <div class="product-card">
             <img
-              src="/static/expresso.jpg"
+              src="/static/img/expresso.jpg"
               alt="Espresso"
               class="product-img"
             />
@@ -431,20 +459,20 @@
               </p>
               <p class="product-price">$2.750</p>
               <button
-                class="add-to-cart"
-                data-id="c1"
-                data-name="Espresso"
-                data-price="2.750"
+                class="add-to-cart-btn"
+                data-product-id="16"
+                data-product-name="Espresso"
+                data-product-price="2.75"
               >
                 Añadir al Carrito
               </button>
             </div>
           </div>
 
-          <!-- Producto 2 -->
+          <!-- Producto 2 (CORREGIDO) -->
           <div class="product-card">
             <img
-              src="/static/americano.jpg"
+              src="/static/img/americano.jpg"
               alt="Americano"
               class="product-img"
             />
@@ -455,10 +483,10 @@
               </p>
               <p class="product-price">$3.250</p>
               <button
-                class="add-to-cart"
-                data-id="c2"
-                data-name="Americano"
-                data-price="3.250"
+                class="add-to-cart-btn"
+                data-product-id="17"
+                data-product-name="Americano"
+                data-product-price="3.25"
               >
                 Añadir al Carrito
               </button>
@@ -468,7 +496,7 @@
           <!-- Producto 3 -->
           <div class="product-card">
             <img
-              src="/static/capuccino.jpg"
+              src="/static/img/capuccino.jpg"
               alt="Cappuccino"
               class="product-img"
             />
@@ -491,7 +519,7 @@
 
           <!-- Producto 4 -->
           <div class="product-card">
-            <img src="/static/latte.jpg" alt="Latte" class="product-img" />
+            <img src="/static/img/latte.jpg" alt="Latte" class="product-img" />
             <div class="product-info">
               <h3 class="product-title">Latte</h3>
               <p class="product-description">
@@ -511,7 +539,7 @@
 
           <!-- Producto 5 -->
           <div class="product-card">
-            <img src="/static/mocha.jpg" alt="Mocha" class="product-img" />
+            <img src="/static/img/mocha.jpg" alt="Mocha" class="product-img" />
             <div class="product-info">
               <h3 class="product-title">Mocha</h3>
               <p class="product-description">
@@ -532,7 +560,7 @@
           <!-- Producto 6 -->
           <div class="product-card">
             <img
-              src="/static/cafefrio2.jpg"
+              src="/static/img/cafefrio2.jpg"
               alt="Café Frío"
               class="product-img"
             />
@@ -556,7 +584,7 @@
           <!-- Producto 7 -->
           <div class="product-card">
             <img
-              src="/static/frapuccino.jpg"
+              src="/static/img/frapuccino.jpg"
               alt="Frappuccino"
               class="product-img"
             />
@@ -579,7 +607,11 @@
 
           <!-- Producto 8 -->
           <div class="product-card">
-            <img src="/static/chai.jpg" alt="Chai Latte" class="product-img" />
+            <img
+              src="/static/img/chai.jpg"
+              alt="Chai Latte"
+              class="product-img"
+            />
             <div class="product-info">
               <h3 class="product-title">Chai Latte</h3>
               <p class="product-description">
@@ -600,7 +632,7 @@
           <!-- Producto 9 -->
           <div class="product-card">
             <img
-              src="/static/matcha.jpg"
+              src="/static/img/matcha.jpg"
               alt="Matcha Latte"
               class="product-img"
             />
@@ -624,7 +656,7 @@
           <!-- Producto 10 -->
           <div class="product-card">
             <img
-              src="/static/chocolatecal.jpg"
+              src="/static/img/chocolatecal.jpg"
               alt="Chocolate Caliente"
               class="product-img"
             />
@@ -648,7 +680,7 @@
           <!-- Producto 11 -->
           <div class="product-card">
             <img
-              src="/static/te negro.jpg"
+              src="/static/img/te negro.jpg"
               alt="Té Negro"
               class="product-img"
             />
@@ -672,7 +704,7 @@
           <!-- Producto 12 -->
           <div class="product-card">
             <img
-              src="/static/559affaf0808d3f7728537fbb8475d33.jpg"
+              src="/static/img/559affaf0808d3f7728537fbb8475d33.jpg"
               alt="Té Verde"
               class="product-img"
             />
@@ -696,7 +728,7 @@
           <!-- Producto 13 -->
           <div class="product-card">
             <img
-              src="/static/naranja.jpg"
+              src="/static/img/naranja.jpg"
               alt="Jugo de Naranja"
               class="product-img"
             />
@@ -720,7 +752,7 @@
           <!-- Producto 14 -->
           <div class="product-card">
             <img
-              src="/static/limonada.jpg"
+              src="/static/img/limonada.jpg"
               alt="Limonada"
               class="product-img"
             />
@@ -744,7 +776,11 @@
 
           <!-- Producto 15 -->
           <div class="product-card">
-            <img src="/static/jugos.jpg" alt="Smoothie" class="product-img" />
+            <img
+              src="/static/img/jugos.jpg"
+              alt="Smoothie"
+              class="product-img"
+            />
             <div class="product-info">
               <h3 class="product-title">Smoothie de Frutas</h3>
               <p class="product-description">
@@ -770,7 +806,7 @@
       <h2 class="section-title">Sobre Nosotros</h2>
       <div class="about-content">
         <div class="about-img">
-          <img src="/static/panaderia.jpg" alt="Nuestra Panadería" />
+          <img src="/static/img/panaderia.jpg" alt="Nuestra Panadería" />
         </div>
         <div class="about-text">
           <h3>Nuestra Historia</h3>
@@ -841,31 +877,6 @@
       </div>
     </section>
 
-    <!-- Cart Icon -->
-    <div class="cart-icon">
-      <span class="cart-count">0</span>
-      <i class="fas fa-shopping-cart"></i>
-    </div>
-
-    <!-- Cart Modal -->
-    <div class="cart-modal">
-      <div class="cart-content">
-        <div class="cart-header">
-          <h3>Tu Carrito</h3>
-          <button class="close-cart">&times;</button>
-        </div>
-        <div class="cart-items">
-          <!-- Cart items will be added here dynamically -->
-          <div class="empty-cart">Tu carrito está vacío</div>
-        </div>
-        <div class="cart-total">
-          <span>Total:</span>
-          <span>$0.00</span>
-        </div>
-        <button class="checkout-btn">Proceder al Pago</button>
-      </div>
-    </div>
-
     <!-- Footer -->
     <footer>
       <div class="footer-content">
@@ -904,25 +915,72 @@
         <p>&copy; 2025 PANCOMIDO. Todos los derechos reservados.</p>
       </div>
     </footer>
+
     <script>
-      // Script para manejar las pestañas de categorías
-      document.addEventListener("DOMContentLoaded", function () {
-        const tabs = document.querySelectorAll(".tab");
-        const productSections = document.querySelectorAll(".product-section");
+      let cart = [];
 
-        tabs.forEach((tab) => {
-          tab.addEventListener("click", () => {
-            const target = tab.dataset.target;
+      function addToCart(button) {
+        const productId = button.getAttribute("data-product-id");
+        const productName = button.getAttribute("data-product-name");
+        const productPrice = parseFloat(
+          button.getAttribute("data-product-price")
+        );
 
-            // Remover clase active de todos los tabs y secciones
-            tabs.forEach((t) => t.classList.remove("active"));
-            productSections.forEach((section) =>
-              section.classList.remove("active")
-            );
+        const existingProduct = cart.find((item) => item.id === productId);
 
-            // Activar el tab y sección correspondiente
-            tab.classList.add("active");
-            document.getElementById(target).classList.add("active");
+        if (existingProduct) {
+          existingProduct.quantity += 1;
+        } else {
+          cart.push({
+            id: productId,
+            name: productName,
+            price: productPrice,
+            quantity: 1,
+          });
+        }
+
+        updateCartUI();
+      }
+
+      function removeFromCart(productId) {
+        cart = cart.filter((item) => item.id !== productId);
+        updateCartUI();
+      }
+
+      function updateCartUI() {
+        const cartContainer = document.getElementById("cart-items");
+        cartContainer.innerHTML = "";
+
+        cart.forEach((item) => {
+          const cartItem = document.createElement("div");
+          cartItem.classList.add("cart-item");
+          cartItem.innerHTML = `
+      <p>${item.name} - $${item.price} x ${item.quantity}</p>
+      <button onclick="removeFromCart('${item.id}')">Eliminar</button>
+    `;
+          cartContainer.appendChild(cartItem);
+        });
+
+        document.getElementById("total-price").textContent = `Total: $${cart
+          .reduce((acc, item) => acc + item.price * item.quantity, 0)
+          .toFixed(2)}`;
+      }
+
+      function finalizePurchase() {
+        if (cart.length === 0) {
+          alert("El carrito está vacío.");
+          return;
+        }
+
+        alert("Compra finalizada. Gracias por tu compra!");
+        cart = [];
+        updateCartUI();
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".add-to-cart-btn").forEach((button) => {
+          button.addEventListener("click", function () {
+            addToCart(this);
           });
         });
       });
