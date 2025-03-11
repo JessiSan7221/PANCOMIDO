@@ -381,7 +381,6 @@ nav a:hover:after {
   font-size: 0.9rem;
 }
 
-
 #cart-icon:hover {
   background-color: #c87f0a;
   transform: translateY(-2px);
@@ -392,7 +391,6 @@ nav a:hover:after {
   height: 18px;
   font-size: 0.7rem;
 }
-
 
 /* Modal del Carrito */
 #cart-modal {
@@ -407,7 +405,6 @@ nav a:hover:after {
   z-index: 2000;
   display: block !important; /* Sobreescribe cualquier display: none */
 }
-
 
 #cart-modal.active {
   right: 0;
@@ -424,10 +421,6 @@ nav a:hover:after {
   font-size: 1.5rem;
   color: #5b3c11;
 }
-
-
-
-
 
 .cart-items {
   flex-grow: 1;
@@ -470,12 +463,6 @@ nav a:hover:after {
   margin-top: 0.5rem;
 }
 
-
-
-
-
-
-
 .cart-total {
   .cart-total {
     font-size: 1.3rem;
@@ -502,7 +489,7 @@ nav a:hover:after {
     background: #c87f0a;
     transform: translateY(-2px);
   }
-
+}
 /* Footer */
 footer {
   background-color: #cbc0ac;
@@ -627,74 +614,82 @@ footer {
     margin-bottom: 1rem;
   }
 
-@media (max-width: 768px) {
-  nav li {
-    margin: 0 1rem;
+  @media (max-width: 768px) {
+    nav li {
+      margin: 0 1rem;
+    }
+
+    .hero {
+      padding: 6rem 1rem;
+    }
+
+    .hero h2 {
+      font-size: 2.2rem;
+    }
+
+    .category-tabs {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tab {
+      margin-bottom: 0.5rem;
+    }
+
+    .products {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
   }
 
-  .hero {
-    padding: 6rem 1rem;
+  @media (max-width: 576px) {
+    header h1 {
+      font-size: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 1.8rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+    }
+
+    .cart-content {
+      max-width: 100%;
+    }
+
+    .contact-form,
+    .contact-info {
+      flex: 1 1 100%;
+    }
   }
 
-  .hero h2 {
-    font-size: 2.2rem;
+  .fas {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
   }
 
-  .category-tabs {
-    flex-direction: column;
-    align-items: center;
+  .fab {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
   }
 
-  .tab {
-    margin-bottom: 0.5rem;
+  .fa-shopping-cart:before {
+    content: "\f07a";
   }
-
-  .products {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  .fa-facebook-f:before {
+    content: "\f39e";
   }
-}
-
-@media (max-width: 576px) {
-  header h1 {
-    font-size: 2rem;
+  .fa-instagram:before {
+    content: "\f16d";
   }
-
-  .hero h2 {
-    font-size: 1.8rem;
+  .fa-twitter:before {
+    content: "\f099";
   }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .cart-content {
-    max-width: 100%;
-  }
-
-  .contact-form,
-  .contact-info {
-    flex: 1 1 100%;
-  }
-}
-
-.fas {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
-
-.fab {
-  font-family: "Font Awesome 5 Brands";
-  font-weight: 400;
-}
-
-.fa-shopping-cart:before { content: "\f07a"; }
-.fa-facebook-f:before { content: "\f39e"; }
-.fa-instagram:before { content: "\f16d"; }
-.fa-twitter:before { content: "\f099"; }
 }
 .product-section {
   display: none;
@@ -768,7 +763,7 @@ footer {
     margin-top: 0.5rem;
   }
 }
-  .increment-btn,
+.increment-btn,
 .decrement-btn {
   width: 30px;
   height: 30px;
@@ -787,9 +782,15 @@ footer {
 }
 /* Agregar en CSS */
 @keyframes addedToCart {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .add-to-cart-btn.added {
